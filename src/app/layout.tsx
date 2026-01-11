@@ -16,11 +16,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "The Drumming Shaman | Anap Pandey",
-  description: "Experience the transformative power of shamanic drumming with Anap Pandey. Healing ceremonies, workshops, and spiritual guidance at The Healing Temple and The Healing Vortex.",
-  keywords: ["shamanic drumming", "healing", "spiritual", "ceremony", "Anap Pandey", "Healing Temple", "Healing Vortex"],
+  title: "The Drumming Shaman | Anup Pandey",
+  description: "Experience the transformative power of shamanic drumming with Anup Pandey. Healing ceremonies, workshops, and spiritual guidance at The Healing Temple and The Healing Vortex.",
+  keywords: ["shamanic drumming", "healing", "spiritual", "ceremony", "Anup Pandey", "Healing Temple", "Healing Vortex"],
   openGraph: {
-    title: "The Drumming Shaman | Anap Pandey",
+    title: "The Drumming Shaman | Anup Pandey",
     description: "Experience transformative shamanic drumming ceremonies",
     type: "website",
   },

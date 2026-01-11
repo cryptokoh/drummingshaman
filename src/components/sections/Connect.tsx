@@ -25,28 +25,28 @@ export function Connect() {
 
   return (
     <section className="section" id="connect" ref={ref}>
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto px-4">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12"
         >
           <span
-            className="inline-block text-sm uppercase tracking-[0.2em] mb-4"
+            className="inline-block text-xs sm:text-sm uppercase tracking-[0.15em] sm:tracking-[0.2em] mb-3 sm:mb-4"
             style={{ color: 'var(--color-primary)' }}
           >
             Get in Touch
           </span>
           <h2
-            className="text-4xl md:text-5xl font-bold mb-4"
+            className="text-2xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4"
             style={{ fontFamily: 'var(--font-cinzel)' }}
           >
             Begin Your Journey
           </h2>
           <p
-            className="text-lg max-w-2xl mx-auto"
+            className="text-sm sm:text-lg max-w-2xl mx-auto px-2"
             style={{ color: 'var(--color-text-muted)' }}
           >
             Ready to experience the transformative power of shamanic drumming?
@@ -54,14 +54,14 @@ export function Connect() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-12">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <form onSubmit={handleSubmit} className="card p-8">
+            <form onSubmit={handleSubmit} className="card p-5 sm:p-8">
               <div className="space-y-6">
                 {/* Name */}
                 <div>
@@ -171,7 +171,7 @@ export function Connect() {
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full btn-primary py-4 text-lg"
+                  className="w-full btn-primary py-3 sm:py-4 text-base sm:text-lg"
                 >
                   Send Message
                 </motion.button>
@@ -184,12 +184,12 @@ export function Connect() {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="space-y-8"
+            className="space-y-4 sm:space-y-8"
           >
             {/* Quick Links */}
-            <div className="card p-8">
+            <div className="card p-5 sm:p-8">
               <h3
-                className="text-xl font-bold mb-6"
+                className="text-lg sm:text-xl font-bold mb-4 sm:mb-6"
                 style={{ fontFamily: 'var(--font-cinzel)' }}
               >
                 Quick Links
@@ -248,9 +248,9 @@ export function Connect() {
             </div>
 
             {/* Social Links */}
-            <div className="card p-8">
+            <div className="card p-5 sm:p-8">
               <h3
-                className="text-xl font-bold mb-6"
+                className="text-lg sm:text-xl font-bold mb-4 sm:mb-6"
                 style={{ fontFamily: 'var(--font-cinzel)' }}
               >
                 Connect on Social
@@ -285,9 +285,9 @@ export function Connect() {
             </div>
 
             {/* Newsletter */}
-            <div className="card p-8">
+            <div className="card p-5 sm:p-8">
               <h3
-                className="text-xl font-bold mb-3"
+                className="text-lg sm:text-xl font-bold mb-2 sm:mb-3"
                 style={{ fontFamily: 'var(--font-cinzel)' }}
               >
                 Stay Connected

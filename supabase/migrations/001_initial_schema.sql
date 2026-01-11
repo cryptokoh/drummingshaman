@@ -428,5 +428,5 @@ INSERT INTO locations (
 -- Insert sample testimonials
 INSERT INTO testimonials (author_name, author_location, quote, event_type, is_approved, is_featured) VALUES
 ('Sarah M.', 'New York, USA', 'The drumming session was unlike anything I''ve experienced. I felt layers of stress melt away and reconnected with a part of myself I''d forgotten existed.', 'ceremony', true, true),
-('Marcus J.', 'London, UK', 'Anap creates such a safe and powerful space. The rhythms took me on a journey that brought deep healing and clarity.', 'workshop', true, true),
+('Marcus J.', 'London, UK', 'Anup creates such a safe and powerful space. The rhythms took me on a journey that brought deep healing and clarity.', 'workshop', true, true),
 ('Yuki T.', 'Tokyo, Japan', 'After years of meditation, I thought I knew inner peace. The drumming ceremony showed me there are depths I hadn''t touched.', 'ceremony', true, true);

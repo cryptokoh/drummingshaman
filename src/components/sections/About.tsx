@@ -12,8 +12,8 @@ export function About() {
 
   return (
     <section className="section section-alt" id="about" ref={ref}>
-      <div className="max-w-6xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-center">
           {/* Portrait */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -22,8 +22,8 @@ export function About() {
             className="relative"
           >
             {/* Main Image Container */}
-            <div className="relative aspect-[3/4] max-w-md mx-auto">
-              {/* Decorative Frame */}
+            <div className="relative aspect-[3/4] max-w-xs sm:max-w-md mx-auto">
+              {/* Decorative Frame - hidden on very small screens */}
               <motion.div
                 animate={{
                   rotate: [0, 2, 0, -2, 0],
@@ -33,7 +33,7 @@ export function About() {
                   repeat: Infinity,
                   ease: 'easeInOut',
                 }}
-                className="absolute -inset-4 rounded-2xl"
+                className="hidden sm:block absolute -inset-4 rounded-2xl"
                 style={{
                   border: `2px solid ${theme.colors.primary}30`,
                 }}
@@ -47,7 +47,7 @@ export function About() {
                   repeat: Infinity,
                   ease: 'easeInOut',
                 }}
-                className="absolute -inset-8 rounded-2xl"
+                className="hidden sm:block absolute -inset-8 rounded-2xl"
                 style={{
                   border: `1px solid ${theme.colors.secondary}20`,
                 }}
@@ -90,11 +90,11 @@ export function About() {
                 )}
               </div>
 
-              {/* Floating Accent */}
+              {/* Floating Accent - hidden on mobile */}
               <motion.div
                 animate={{ y: [-10, 10, -10] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -right-6 top-1/4 w-12 h-12 rounded-full glow-subtle"
+                className="hidden sm:block absolute -right-6 top-1/4 w-10 sm:w-12 h-10 sm:h-12 rounded-full glow-subtle"
                 style={{
                   background: `linear-gradient(135deg, ${theme.colors.accent}, ${theme.colors.primary})`,
                 }}
@@ -125,10 +125,10 @@ export function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.5 }}
-              className="text-4xl md:text-5xl font-bold mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6"
               style={{ fontFamily: 'var(--font-cinzel)' }}
             >
-              Anap Pandey
+              Anup Pandey
             </motion.h2>
 
             {/* Bio */}
@@ -136,18 +136,18 @@ export function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.6 }}
-              className="space-y-4 text-lg leading-relaxed"
+              className="space-y-3 sm:space-y-4 text-base sm:text-lg leading-relaxed"
               style={{ color: 'var(--color-text-muted)' }}
             >
               <p>
-                Anap Pandey is a master of the ancient art of shamanic drumming,
+                Anup Pandey is a master of the ancient art of shamanic drumming,
                 carrying forward traditions that have healed souls for millennia.
                 As the founder of <span style={{ color: 'var(--color-primary)' }}>The Healing Temple</span> and{' '}
                 <span style={{ color: 'var(--color-secondary)' }}>The Healing Vortex</span>,
                 he creates sacred spaces where transformation becomes possible.
               </p>
               <p>
-                Through the primal rhythm of the drum, Anap guides participants on
+                Through the primal rhythm of the drum, Anup guides participants on
                 journeys of self-discovery, releasing blockages and awakening the
                 innate healing power within each person.
               </p>
@@ -158,7 +158,7 @@ export function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.7 }}
-              className="grid grid-cols-3 gap-4 mt-8"
+              className="grid grid-cols-3 gap-2 sm:gap-4 mt-6 sm:mt-8"
             >
               {[
                 { value: '15+', label: 'Years Experience' },
@@ -167,16 +167,16 @@ export function About() {
               ].map((stat, index) => (
                 <div
                   key={stat.label}
-                  className="card p-4 text-center"
+                  className="card p-2 sm:p-4 text-center"
                 >
                   <div
-                    className="text-2xl md:text-3xl font-bold mb-1"
+                    className="text-xl sm:text-2xl md:text-3xl font-bold mb-1"
                     style={{ color: 'var(--color-accent)' }}
                   >
                     {stat.value}
                   </div>
                   <div
-                    className="text-xs uppercase tracking-wider"
+                    className="text-[10px] sm:text-xs uppercase tracking-wider leading-tight"
                     style={{ color: 'var(--color-text-muted)' }}
                   >
                     {stat.label}

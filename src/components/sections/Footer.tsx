@@ -9,32 +9,32 @@ export function Footer() {
 
   return (
     <footer
-      className="py-12 px-6"
+      className="py-8 sm:py-12 px-4 sm:px-6"
       style={{ background: 'var(--color-background-alt)' }}
     >
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
           {/* Brand */}
-          <div>
+          <div className="sm:col-span-2 md:col-span-1">
             <h3
-              className="text-2xl font-bold mb-4"
+              className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4"
               style={{ fontFamily: 'var(--font-cinzel)' }}
             >
               <span className="text-gradient">The Drumming Shaman</span>
             </h3>
             <p
-              className="text-sm leading-relaxed"
+              className="text-xs sm:text-sm leading-relaxed"
               style={{ color: 'var(--color-text-muted)' }}
             >
               Ancient rhythms for modern healing. Experience the transformative
-              power of shamanic drumming with Anap Pandey.
+              power of shamanic drumming with Anup Pandey.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
             <h4
-              className="font-bold mb-4 uppercase tracking-wider text-sm"
+              className="font-bold mb-3 sm:mb-4 uppercase tracking-wider text-xs sm:text-sm"
               style={{ color: 'var(--color-text-muted)' }}
             >
               Explore
@@ -50,7 +50,7 @@ export function Footer() {
                   <motion.a
                     href={link.href}
                     whileHover={{ x: 5 }}
-                    className="text-sm transition-colors"
+                    className="text-xs sm:text-sm transition-colors"
                     style={{ color: 'var(--color-text-muted)' }}
                   >
                     {link.label}
@@ -63,17 +63,17 @@ export function Footer() {
           {/* Sister Sites */}
           <div>
             <h4
-              className="font-bold mb-4 uppercase tracking-wider text-sm"
+              className="font-bold mb-3 sm:mb-4 uppercase tracking-wider text-xs sm:text-sm"
               style={{ color: 'var(--color-text-muted)' }}
             >
               Sacred Spaces
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2 sm:space-y-3">
               <li>
                 <motion.a
                   href="#"
                   whileHover={{ scale: 1.02 }}
-                  className="flex items-center gap-2 text-sm"
+                  className="flex items-center gap-2 text-xs sm:text-sm"
                   style={{ color: 'var(--color-primary)' }}
                 >
                   <span>🏛️</span>
@@ -84,7 +84,7 @@ export function Footer() {
                 <motion.a
                   href="#"
                   whileHover={{ scale: 1.02 }}
-                  className="flex items-center gap-2 text-sm"
+                  className="flex items-center gap-2 text-xs sm:text-sm"
                   style={{ color: 'var(--color-secondary)' }}
                 >
                   <span>🌀</span>
@@ -97,29 +97,29 @@ export function Footer() {
 
         {/* Divider */}
         <div
-          className="h-px w-full mb-8"
+          className="h-px w-full mb-6 sm:mb-8"
           style={{ background: `${theme.colors.primary}20` }}
         />
 
         {/* Bottom */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-center sm:text-left">
           <p
-            className="text-sm"
+            className="text-xs sm:text-sm"
             style={{ color: 'var(--color-text-muted)' }}
           >
             &copy; {currentYear} The Drumming Shaman. All rights reserved.
           </p>
-          <div className="flex gap-6">
+          <div className="flex gap-4 sm:gap-6">
             <a
               href="#"
-              className="text-sm transition-colors hover:underline"
+              className="text-xs sm:text-sm transition-colors hover:underline"
               style={{ color: 'var(--color-text-muted)' }}
             >
               Privacy Policy
             </a>
             <a
               href="#"
-              className="text-sm transition-colors hover:underline"
+              className="text-xs sm:text-sm transition-colors hover:underline"
               style={{ color: 'var(--color-text-muted)' }}
             >
               Terms of Service

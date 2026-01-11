@@ -53,13 +53,13 @@ export function Hero() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-5xl mx-auto text-center">
+      <div className="relative z-10 max-w-5xl mx-auto text-center px-4">
         {/* Subtitle */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-sm md:text-base uppercase tracking-[0.3em] mb-6"
+          className="text-xs sm:text-sm md:text-base uppercase tracking-[0.15em] sm:tracking-[0.3em] mb-4 sm:mb-6"
           style={{ color: 'var(--color-text-muted)' }}
         >
           Experience the rhythm of healing
@@ -70,7 +70,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight"
+          className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-4 sm:mb-6 leading-tight"
           style={{ fontFamily: 'var(--font-cinzel)' }}
         >
           <span className="block">The</span>
@@ -84,10 +84,10 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
-          className="text-xl md:text-2xl mb-8"
+          className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8"
           style={{ color: 'var(--color-text-muted)' }}
         >
-          Anap Pandey
+          Anup Pandey
         </motion.p>
 
         {/* Tagline */}
@@ -95,7 +95,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1 }}
-          className="text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed"
+          className="text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 sm:mb-12 leading-relaxed px-2"
           style={{ color: 'var(--color-text)' }}
         >
           Journey into ancient rhythms that awaken your spirit, heal your heart,
@@ -145,7 +145,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
-          className="mt-12"
+          className="mt-8 sm:mt-12"
         >
           <AudioToggle />
         </motion.div>

@@ -14,7 +14,7 @@ export function ThemeSelector() {
   const currentTheme = themes[themeId];
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
       {/* Expanded Theme Options */}
       <AnimatePresence>
         {isOpen && (
@@ -23,7 +23,7 @@ export function ThemeSelector() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
             transition={{ type: 'spring', damping: 20, stiffness: 300 }}
-            className="absolute bottom-20 right-0 p-3 rounded-2xl card"
+            className="absolute bottom-16 sm:bottom-20 right-0 p-2 sm:p-3 rounded-xl sm:rounded-2xl card"
             style={{
               background: `color-mix(in srgb, var(--color-surface) 95%, transparent)`,
               backdropFilter: 'blur(20px)',
@@ -43,7 +43,7 @@ export function ThemeSelector() {
                     }}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 ${
+                    className={`flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl transition-all duration-300 ${
                       isActive
                         ? ''
                         : 'hover:bg-[var(--color-background-alt)]'
@@ -60,7 +60,7 @@ export function ThemeSelector() {
                     {/* Theme Color Preview */}
                     <div className="relative">
                       <div
-                        className="w-8 h-8 rounded-full"
+                        className="w-7 h-7 sm:w-8 sm:h-8 rounded-full"
                         style={{
                           background: `linear-gradient(135deg, ${theme.colors.primary}, ${theme.colors.secondary})`,
                           boxShadow: isActive
@@ -81,14 +81,14 @@ export function ThemeSelector() {
 
                     {/* Theme Info */}
                     <div className="text-left">
-                      <div className="flex items-center gap-2">
-                        <span className="text-lg">{theme.icon}</span>
-                        <span className="font-semibold text-sm">
+                      <div className="flex items-center gap-1.5 sm:gap-2">
+                        <span className="text-base sm:text-lg">{theme.icon}</span>
+                        <span className="font-semibold text-xs sm:text-sm">
                           {theme.name}
                         </span>
                       </div>
                       <span
-                        className="text-xs"
+                        className="text-[10px] sm:text-xs hidden sm:block"
                         style={{ color: 'var(--color-text-muted)' }}
                       >
                         {theme.description}
@@ -107,7 +107,7 @@ export function ThemeSelector() {
         onClick={() => setIsOpen(!isOpen)}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="relative w-14 h-14 rounded-full cursor-pointer"
+        className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full cursor-pointer"
         style={{
           background: `linear-gradient(135deg, ${currentTheme.colors.primary}, ${currentTheme.colors.secondary})`,
         }}
@@ -150,14 +150,14 @@ export function ThemeSelector() {
         />
       </motion.button>
 
-      {/* Label on Hover */}
+      {/* Label on Hover - hidden on mobile */}
       <AnimatePresence>
         {!isOpen && (
           <motion.div
             initial={{ opacity: 0, x: 10 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 10 }}
-            className="absolute right-full mr-3 top-1/2 -translate-y-1/2 whitespace-nowrap"
+            className="hidden sm:block absolute right-full mr-3 top-1/2 -translate-y-1/2 whitespace-nowrap"
           >
             <span
               className="text-sm px-3 py-1.5 rounded-full"

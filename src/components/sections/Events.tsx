@@ -59,37 +59,37 @@ export function Events() {
 
   return (
     <section className="section section-alt" id="events" ref={ref}>
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto px-4">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12"
         >
           <span
-            className="inline-block text-sm uppercase tracking-[0.2em] mb-4"
+            className="inline-block text-xs sm:text-sm uppercase tracking-[0.15em] sm:tracking-[0.2em] mb-3 sm:mb-4"
             style={{ color: 'var(--color-primary)' }}
           >
             Upcoming Events
           </span>
           <h2
-            className="text-4xl md:text-5xl font-bold mb-4"
+            className="text-2xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4"
             style={{ fontFamily: 'var(--font-cinzel)' }}
           >
             Where's the Drumming Shaman Next?
           </h2>
           <p
-            className="text-lg max-w-2xl mx-auto"
+            className="text-sm sm:text-lg max-w-2xl mx-auto px-2"
             style={{ color: 'var(--color-text-muted)' }}
           >
-            Join Anap at one of his transformative events and experience the
+            Join Anup at one of his transformative events and experience the
             healing power of the drum firsthand.
           </p>
         </motion.div>
 
         {/* Events Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
           {upcomingEvents.map((event, index) => (
             <motion.div
               key={event.id}
@@ -101,7 +101,7 @@ export function Events() {
             >
               {/* Event Type Badge */}
               <div
-                className="px-4 py-2 text-xs uppercase tracking-wider font-semibold"
+                className="px-3 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-xs uppercase tracking-wider font-semibold"
                 style={{
                   background: `${getTypeColor(event.type)}20`,
                   color: getTypeColor(event.type),
@@ -110,21 +110,21 @@ export function Events() {
                 {event.type}
               </div>
 
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 {/* Date */}
-                <div className="flex items-center gap-2 mb-4">
+                <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                   <div
-                    className="w-12 h-12 rounded-lg flex flex-col items-center justify-center"
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex flex-col items-center justify-center"
                     style={{ background: `${theme.colors.primary}20` }}
                   >
                     <span
-                      className="text-xs uppercase"
+                      className="text-[10px] sm:text-xs uppercase"
                       style={{ color: 'var(--color-primary)' }}
                     >
                       {event.date.split(' ')[0].slice(0, 3)}
                     </span>
                     <span
-                      className="text-lg font-bold"
+                      className="text-sm sm:text-lg font-bold"
                       style={{ color: 'var(--color-primary)' }}
                     >
                       {event.date.split(' ')[1].replace(',', '')}
@@ -132,13 +132,13 @@ export function Events() {
                   </div>
                   <div>
                     <div
-                      className="font-semibold"
+                      className="text-sm sm:text-base font-semibold"
                       style={{ color: 'var(--color-text)' }}
                     >
                       {event.date}
                     </div>
                     <div
-                      className="text-sm"
+                      className="text-xs sm:text-sm"
                       style={{ color: 'var(--color-text-muted)' }}
                     >
                       {event.time}
@@ -148,16 +148,16 @@ export function Events() {
 
                 {/* Title */}
                 <h3
-                  className="text-xl font-bold mb-3 group-hover:text-gradient transition-all"
+                  className="text-base sm:text-xl font-bold mb-2 sm:mb-3 group-hover:text-gradient transition-all leading-tight"
                   style={{ fontFamily: 'var(--font-cinzel)' }}
                 >
                   {event.title}
                 </h3>
 
                 {/* Location */}
-                <div className="flex items-start gap-2 mb-4">
+                <div className="flex items-start gap-2 mb-3 sm:mb-4">
                   <svg
-                    className="w-5 h-5 mt-0.5 flex-shrink-0"
+                    className="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -178,13 +178,13 @@ export function Events() {
                   </svg>
                   <div>
                     <div
-                      className="text-sm font-medium"
+                      className="text-xs sm:text-sm font-medium"
                       style={{ color: 'var(--color-text)' }}
                     >
                       {event.location}
                     </div>
                     <div
-                      className="text-sm"
+                      className="text-xs sm:text-sm"
                       style={{ color: 'var(--color-text-muted)' }}
                     >
                       {event.city}
@@ -193,9 +193,9 @@ export function Events() {
                 </div>
 
                 {/* Spots & CTA */}
-                <div className="flex items-center justify-between pt-4 border-t border-[var(--color-surface)]">
+                <div className="flex items-center justify-between pt-3 sm:pt-4 border-t border-[var(--color-surface)]">
                   <span
-                    className="text-sm"
+                    className="text-xs sm:text-sm"
                     style={{
                       color:
                         event.spotsLeft < 10
@@ -208,7 +208,7 @@ export function Events() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-4 py-2 rounded-full text-sm font-semibold transition-all"
+                    className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold transition-all"
                     style={{
                       background: theme.colors.primary,
                       color: themeId === 'modern' ? '#fff' : 'var(--color-text)',
@@ -256,17 +256,17 @@ export function Events() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 1 }}
-          className="mt-16"
+          className="mt-10 sm:mt-16"
         >
           <div
-            className="aspect-[21/9] rounded-2xl overflow-hidden relative"
+            className="aspect-[16/9] sm:aspect-[21/9] rounded-xl sm:rounded-2xl overflow-hidden relative"
             style={{
               background: `linear-gradient(135deg, ${theme.colors.surface}, ${theme.colors.backgroundAlt})`,
             }}
           >
             <div className="absolute inset-0 flex flex-col items-center justify-center">
               <svg
-                className="w-16 h-16 mb-4"
+                className="w-10 h-10 sm:w-16 sm:h-16 mb-3 sm:mb-4"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -280,7 +280,7 @@ export function Events() {
                 />
               </svg>
               <span
-                className="text-sm uppercase tracking-widest"
+                className="text-xs sm:text-sm uppercase tracking-widest"
                 style={{ color: 'var(--color-text-muted)' }}
               >
                 Interactive Map Coming Soon
