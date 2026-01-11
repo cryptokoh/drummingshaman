@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.90.1",
     "framer-motion": "^12.25.0",
     "howler": "^2.2.4",
     "next": "16.1.1",
