@@ -7,6 +7,7 @@ import { useThemeContext } from '@/app/providers';
 const navLinks = [
   { href: '/#about', label: 'About' },
   { href: '/#experience', label: 'Experience' },
+  { href: '/venues', label: 'Venues' },
   { href: '/#events', label: 'Events' },
   { href: '/shaman', label: 'Meet Anup' },
   { href: '/journey', label: 'Drum Journey' },
