@@ -7,10 +7,14 @@ import { Events } from '@/components/sections/Events';
 import { Connect } from '@/components/sections/Connect';
 import { Footer } from '@/components/sections/Footer';
 import { ThemeSelector } from '@/components/ThemeSelector';
+import { Navigation } from '@/components/Navigation';
 
 export default function Home() {
   return (
     <main className="relative">
+      {/* Navigation */}
+      <Navigation />
+
       {/* Theme Selector - Fixed Position */}
       <ThemeSelector />
 
